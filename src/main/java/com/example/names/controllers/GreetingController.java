@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping(value = "/greeting")
+@RestController //Tells Java that this class is a controller, also includes @ResponseBody
+@RequestMapping(value = "/greeting") //Indicates that these mappings happen at the end of /greeting
 public class GreetingController {
 
-    @GetMapping()
+    @GetMapping
     public Greeting getGreeting(@RequestParam(defaultValue = "timeOfDay placeholder") String timeOfDay){
         return new Greeting("Colin", timeOfDay); //http://localhost:8080/greeting?timeOfDay=4pm
     }

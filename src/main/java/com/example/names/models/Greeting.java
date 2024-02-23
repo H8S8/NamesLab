@@ -2,9 +2,11 @@ package com.example.names.models;
 
 public class Greeting {
 
+    // All fields are private
     private String name;
     private String timeOfDay;
 
+    //Default constructor
     public Greeting(){}
 
     public Greeting(String name, String timeOfDay){
@@ -12,6 +14,7 @@ public class Greeting {
         this.timeOfDay = timeOfDay;
     }
 
+    // Public getters and setters
     public String getName() {
         return name;
     }
